@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+	<title>清一色データベース</title>
+	<link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+	<div class="l-grid-root">
+		<header class="l-grid-root__header">
+			<img class="p-img-full" src="../img/header.jpg" alt="ヘッダー">
+		</header>
+		<main class="l-grid-root__main l-container--large">
+			<nav class="l-grid-root__nav">
+				<ul class="l-flex c-nav">
+					<li class="c-nav__li"><a href="../index.html" class="c-link c-nav__li__a">トップページ</a></li>
+					<li class="c-nav__li"><a href="../blog/index.html" class="c-link c-nav__li__a">ブログ</a></li>
+					<li class="c-nav__li c-nav__current"><a href="./game/index.html" class="c-link c-nav__current__a">待ち当てクイズ</a></li>
+				</ul>
+			</nav>
+
+			<section class="container-section">
+				<p>仮実装。アルファ版。テンパイ形のみ対応</p>
+				<h1 class="c-heading-1">出題設定</h1>
+				<p>追加予定の機能：待ちの数やノーテン形を含むかどうかを設定できるようにする</p>
+				<div>
+					<h3 class="c-heading-3">表示牌の種類</h3>
+					<form name="paiga_style_select_form">
+						<label class="c-selectbox">
+							<select name="paiga_style">
+								<option value="man" selected="selected">マンズ</option>
+								<option value="pin">ピンズ</option>
+								<option value="sou">ソウズ</option>
+							</select>
+						</label>
+					</form>
+				</div>
+			</section>
+			<section class="container-section">
+				<h2 class="c-heading-2">クイズ</h2>
+				<button class="c-btn" type="button" id="js-start-btn">出題</button>
+			</section>
+			<section class="container-section">
+				<div id="js-chinitsu-quiz"></div>
+				<p>下記から待ちになっている牌を全てクリックしてください。ノーテンの場合は何もクリックせず回答をおしてください。</p>
+			</section>
+
+			<section class="container-section">
+				<form name="answer_checkbox_form">
+					<fieldset id="js-quiz-answer" class="c-checkbox--paiga"></fieldset>
+				</form>
+				<button class="c-btn" type="button" id="js-answer-btn">回答</button>
+			</section>
+
+			<section class="container-section">
+				<div id="js-quiz-result"></div>
+			</section>
+		</main>
+		<footer class="l-grid-root__footer footer">
+			<p class="copyright">© 2023 Hiroshi Sano All Rights Reserved. 監修: Masaru Shiobara</p>
+		</footer>
+	</div>
+	<script type="text/javascript" src="../game.bundle.js" defer></script>
+</body>
+</html>
