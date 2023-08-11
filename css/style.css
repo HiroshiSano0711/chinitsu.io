@@ -429,10 +429,6 @@ template {
   background-color: #74b9ff;
 }
 
-.c-btn--block {
-  display: block;
-}
-
 .c-checkbox {
   display: flex;
   flex-wrap: wrap;
