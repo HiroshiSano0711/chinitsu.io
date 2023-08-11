@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+	<title>清一色データベース</title>
+	<link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+	<div class="l-grid-root">
+		<header class="l-grid-root__header">
+			<img class="p-img-full" src="../img/header.jpg" alt="ヘッダー">
+		</header>
+		<main class="l-grid-root__main l-container--large">
+			<nav class="l-grid-root__nav">
+				<ul class="l-flex c-nav">
+					<li class="c-nav__li"><a href="../index.html" class="c-link c-nav__li__a">トップページ</a></li>
+					<li class="c-nav__li"><a href="../blog/list.html" class="c-link c-nav__li__a">ブログ</a></li>
+					<li class="c-nav__li c-nav__current"><a href="./quiz.html" class="c-link c-nav__current__a">クイズ</a></li>
+				</ul>
+			</nav>
+
+			<section class="container-section">
+				<p>仮実装。ベータ版。</p>
+				<h1 class="c-heading-1">待ちあてクイズ</h1>
+				<h2 class="c-heading-2">出題設定</h2>
+				<p>出題内容にそのパターンや形を含むかどうかを設定できます。何も設定しない場合はテンパイ形からランダムで出題されます。</p>
+				<div class="form-group">
+					<h3 class="c-heading-3">表示牌の種類</h3>
+					<form name="paiga_style_select_form">
+						<label class="c-selectbox">
+							<select name="paiga_style">
+								<option value="man" selected="selected">マンズ</option>
+								<option value="pin">ピンズ</option>
+								<option value="sou">ソウズ</option>
+							</select>
+						</label>
+					</form>
+				</div>
+				<div class="form-group">
+					<h3 class="c-heading-3">シャンテン数(※テンパイ形は必須)
+					</h3>
+					<form name="shanten_form">
+						<fieldset class="c-checkbox">
+							<label><input type="checkbox" name="shanten" value="0" checked="1" disabled>テンパイ</label>
+							<label><input type="checkbox" name="shanten" value="1">イーシャンテン</label>
+							<label><input type="checkbox" name="shanten" value="2">リャンシャンテン</label>
+						</fieldset>
+					</form>
+				</div>
+				<div class="form-group">
+					<h3 class="c-heading-3">待ちの数</h3>
+					<form name="machi_count_form">
+						<fieldset class="c-checkbox">
+							<label><input type="checkbox" name="machi_count" value="1">1門待ち</label>
+							<label><input type="checkbox" name="machi_count" value="2">2門待ち</label>
+							<label><input type="checkbox" name="machi_count" value="3">3門待ち</label>
+							<label><input type="checkbox" name="machi_count" value="4">4門待ち</label>
+							<label><input type="checkbox" name="machi_count" value="5">5門待ち</label>
+							<label><input type="checkbox" name="machi_count" value="6">6門待ち</label>
+							<label><input type="checkbox" name="machi_count" value="7">7門待ち</label>
+							<label><input type="checkbox" name="machi_count" value="8">8門待ち</label>
+							<label><input type="checkbox" name="machi_count" value="9">9門待ち</label>
+						</fieldset>
+					</form>
+				</div>
+				<div class="form-group">
+					<h3 class="c-heading-3">カンコの数</h3>
+					<form name="kanko_count_form">
+						<fieldset class="c-checkbox">
+							<label><input type="checkbox" name="kanko_count" value="0">なし</label>
+							<label><input type="checkbox" name="kanko_count" value="1">1つ使い</label>
+							<label><input type="checkbox" name="kanko_count" value="2">2つ使い</label>
+							<label><input type="checkbox" name="kanko_count" value="3">3つ使い</label>
+						</fieldset>
+					</form>
+				</div>
+			</section>
+			<section class="container-section">
+				<h2 class="c-heading-2">クイズ</h2>
+				<p>待ちの牌を全てクリック。ノーテンの場合は何もせず回答をおしてください。</p>
+				<button class="c-btn" type="button" id="js-start-btn">出題</button>
+			</section>
+			<section class="container-section">
+				<div id="js-chinitsu-quiz"></div>
+			</section>
+
+			<section class="container-section">
+				<form name="answer_checkbox_form">
+					<fieldset id="js-quiz-answer" class="c-checkbox--paiga"></fieldset>
+				</form>
+				<button class="c-btn" type="button" id="js-answer-btn">回答</button>
+			</section>
+
+			<section class="container-section">
+				<div id="js-quiz-result"></div>
+			</section>
+		</main>
+		<footer class="l-grid-root__footer footer">
+			<p class="copyright">© 2023 Hiroshi Sano All Rights Reserved. 監修: Masaru Shiobara</p>
+		</footer>
+	</div>
+	<script type="text/javascript" src="../game.bundle.js" defer></script>
+</body>
+</html>
