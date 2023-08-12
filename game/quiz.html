@@ -23,8 +23,8 @@
 			</nav>
 
 			<section class="l-section">
-				<p>仮実装。ベータ版。</p>
-				<h1 class="c-heading-1">待ちあてクイズ</h1>
+				<p>スコア機能を追加予定。</p>
+				<h1 class="c-heading-1">待ち当てクイズ</h1>
 				<h2 class="c-heading-2">出題設定</h2>
 				<p>出題内容にそのパターンや形を含むかどうかを設定できます。何も設定しない場合はテンパイ形からランダムで出題されます。</p>
 				<div class="u-mb--m">
@@ -92,12 +92,14 @@
 				</form>
 			</section>
 			<section class="l-section">
-				<button class="c-btn c-btn--basic" type="button" id="js-quiz-start-btn">出題</button>
-				<button class="c-btn c-btn--action" type="button" id="js-answer-btn">回答</button>
+				<div class="l-flex l-flex--center">
+					<button class="c-btn c-btn--basic" type="button" id="js-quiz-start-btn">出題</button>
+					<button class="c-btn c-btn--action u-ml--m" type="button" id="js-answer-btn">回答</button>
+				</div>
 			</section>
 
 			<section class="l-section">
-				<div id="js-quiz-result" class="p-result"></div>
+				<div id="js-quiz-result" class="l-flex l-flex--center p-result"></div>
 			</section>
 		</main>
 		<footer class="l-grid-root__footer footer">
